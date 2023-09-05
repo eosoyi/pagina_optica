@@ -1,0 +1,100 @@
+
+
+.container-card-servicios{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.card-servicios{
+    display: grid; 
+    grid-template-areas: "img";
+    height: 450px;
+    width: 350px;
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .img-card{
+        width: 100%;
+        height: 100%;
+        display: block;
+        grid-area: img;
+        transform: scale(1);
+        transition: .4s transform ease-in-out;
+    }
+
+    &:hover .img-card{
+        transform: scale(1.1);
+    }
+
+    &::before{
+        grid-area: img;
+        z-index: 10;
+        background-color: rgba(19, 11, 122, 0.9);
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+        text-align: center;
+        font-family: var(--fuente-textos);
+        font-weight: 500;
+        color: #FFFFFF;
+        transform: translateY(0%) translateX(-100%) rotate(180deg); 
+        transition: .5s transform;
+        border-radius: 8px;
+    }
+    &:nth-child(1)::before{
+        content: 'Clarifica tu vista: Realiza un examen óptico para una visión más nítida y saludable.';
+    }
+    &:nth-child(2)::before{
+        content: 'Ve claramente: Realiza un examen visual para asegurar una visión nítida y precisa.';
+    }
+    &:nth-child(3)::before{
+        content: 'Encuentra tu ajuste perfecto: Experimenta comodidad con nuestros servicios de adaptación de lentes de contacto.';
+    }
+    &:nth-child(4)::before{
+        content: 'Claridad a medida: Descubre un mundo nítido con nuestros lentes graduados y disfruta de una visión personalizada.';
+    }
+    &:nth-child(5)::before{
+        content: 'Estilo bajo el sol: Protege tus ojos con elegancia con nuestros modernos lentes de sol para un verano inolvidable.';
+    }
+    &:nth-child(6)::before{
+        content: 'Detalles que importan: Complementa tu estilo y cuida tus lentes con nuestra gama de accesorios pensados para ti.';
+    }
+
+    &:hover::before{
+        transform: translate(0) rotate(0); 
+    }
+
+    &::after{
+        content: attr(data-text);
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        padding-top: 118%;
+        font-family: var(--fuente-titulos);
+        font-weight: 700;
+        transition: .3s font-size ease-in-out;
+    }
+    &:hover::after{
+        font-size: 0;
+    }   
+}
+
+@media screen and (min-width: 1024px) {
+    .card-servicios{
+        height: 450px;
+        width: 450px;
+
+        &::after{
+            padding-top: 93%;
+        }
+    }
+}
