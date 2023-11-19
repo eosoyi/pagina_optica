@@ -37,7 +37,11 @@ export const Menu = () => {
                             <ul>
                                 <li className="item-menu">
                                     <FaCaretRight className="icon-item"></FaCaretRight>
-                                    <a href="">Inicio</a>
+                                    <a href="#estilos" onClick={closeMenu}>Inicio</a>
+                                </li>
+                                <li className="item-menu">
+                                    <FaCaretRight className="icon-item"></FaCaretRight>
+                                    <a href="#estilos" onClick={closeMenu}>Estilos</a>
                                 </li>
                                 <li className="item-menu">
                                     <FaCaretRight className="icon-item"></FaCaretRight>

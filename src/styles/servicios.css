@@ -49,7 +49,7 @@
         border-radius: 8px;
     }
     &:nth-child(1)::before{
-        content: 'Clarifica tu vista: Realiza un examen óptico para una visión más nítida y saludable.';
+        content: 'Realiza un examen óptico para una visión más nítida y saludable.';
     }
     &:nth-child(2)::before{
         content: 'Ve claramente: Realiza un examen visual para asegurar una visión nítida y precisa.';
